@@ -27,3 +27,4 @@ ian:accounts-ui-bootstrap-3
 iron:router
 npm-bcrypt
 accounts-password
+sacha:spin
