@@ -1,0 +1,9 @@
+<template name="game">
+	<button class="btn btn-primary draw_end">Piocher une carte fin</button>
+	<div class="logs">
+		{{#each logs}}
+			{{> logItem}}
+		{{/each}}
+	</div>
+	<button class="btn btn-warning delete">Réinitialiser la partie</button>
+</template>

@@ -1,6 +1,6 @@
 <template name="endcardsList">
-	<a href="{{pathFor 'endcardSubmit'}}"><div class="btn btn-primary">Ajouter une carte fin</div></a>
-
+	<a class="btn btn-primary" href="{{pathFor 'endcardSubmit'}}">Ajouter une carte fin</a>
+	<hr/>
   <div class="endcards">
     {{#each endcards}}
       {{> endcardItem}}
