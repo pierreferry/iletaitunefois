@@ -5,14 +5,17 @@ Template.game.events({
 		endcard = Endcards.findOne({"owner": ""});
 
 		if (endcard) {
+			username = Meteor.user().profile.name
 			var log = {
 				text: 'a pioché une carte fin.',
-				from: 'pferry'
+				from: username
 			}
 			log._id = Logs.insert(log);
-			Endcards.update(endcard._id, {$set: {"owner": 'coucou'}});
+			Endcards.update(endcard._id, {$set: {"owner": username}});
 		}
-		console.log(Meteor.user())
+		else {
+			console.log("No more endcards.")
+		}
   },
 
 	'click .delete': function(e) {

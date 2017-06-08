@@ -3,3 +3,9 @@ Template.endcardsList.helpers({
 		return Endcards.find();
 	}
 });
+
+Template.endcardsList.events({
+	'dblclick .card': function() {
+		Router.go('endcardEdit', this);
+	}
+})

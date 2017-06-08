@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 
 Meteor.startup(() => {
   // code to run on server at startup
+
 });
 
 if (Meteor.isServer) {
@@ -11,7 +12,7 @@ if (Meteor.isServer) {
         return Logs.remove({});
       },
 			resetEndcards: function() {
-				return Endcards.update( {"owner": {$ne: ""} }, {$set: {"owner": ""}}, {multi: true} );
+				return Endcards.update( {"owner": {$ne: ""} }, {$set: {"owner": "", "played": null}}, {multi: true} );
 			}
     });
   });

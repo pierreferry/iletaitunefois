@@ -1,4 +1,4 @@
-.grid-block, .main, .post, .comments li, .comment-form {
+.grid-block, .main, .log, .comments li, .comment-form {
   background: #fff;
   border-radius: 3px;
   padding: 10px;
@@ -6,6 +6,11 @@
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
+
+@font-face {
+	font-family: "Medival Font";
+	src: url('GothenburgFraktur.ttf');
+}
 
 body {
   background: #eee;
@@ -29,50 +34,50 @@ body {
 #spinner {
   height: 300px; }
 
-.post {
+.log {
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
   position: relative;
   opacity: 1; }
-  .post:before, .post:after {
+  .log:before, .log:after {
     content: "";
     display: table; }
-  .post:after {
+  .log:after {
     clear: both; }
-  .post.invisible {
+  .log.invisible {
     opacity: 0; }
-  .post.instant {
+  .log.instant {
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
     transition: none; }
-  .post.animate{
+  .log.animate{
     -webkit-transition: all 300ms 0ms;
     -moz-transition: all 300ms 0ms ease-in;
     -o-transition: all 300ms 0ms ease-in;
     transition: all 300ms 0ms ease-in; }
-  .post .upvote {
+  .log .upvote {
     display: block;
     margin: 7px 12px 0 0;
     float: left; }
-  .post .post-content {
+  .log .log-content {
     float: left; }
-    .post .post-content h3 {
+    .log .log-content h3 {
       margin: 0;
       line-height: 1.4;
       font-size: 18px; }
-      .post .post-content h3 a {
+      .log .log-content h3 a {
         display: inline-block;
         margin-right: 5px; }
-      .post .post-content h3 span {
+      .log .log-content h3 span {
         font-weight: normal;
         font-size: 14px;
         display: inline-block;
         color: #aaaaaa; }
-    .post .post-content p {
+    .log .log-content p {
       margin: 0; }
-  .post .discuss {
+  .log .discuss {
     display: block;
     float: right;
     margin-top: 7px; }
@@ -111,9 +116,13 @@ body {
     text-decoration: none;
     background: rgba(0, 0, 0, 0.1); }
 
-.posts .spinner-container{
+.logs .spinner-container{
   position: relative;
   height: 100px;
+}
+
+.logs {
+	margin-top: 10px;
 }
 
 .jumbotron{
@@ -157,4 +166,31 @@ body {
   clear: both;
   margin-bottom: 5px;
   pointer-events: auto;
+}
+.hand {
+	width: 100%;
+  display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.card {
+  float: left;
+  width: 180px;
+  height: 240px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 25px;
+	padding: 10px;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  background-color: white;
+}
+
+.endcard {
+	font-family: "Medival Font";
+	font-size: 24px;
+	text-align: center;
 }
